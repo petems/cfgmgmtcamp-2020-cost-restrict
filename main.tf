@@ -25,7 +25,7 @@ data "aws_ami" "xenial_ami" {
 
 resource "aws_instance" "foobar" {
   ami           = data.aws_ami.xenial_ami.image_id
-  instance_type = "t2.micro"
+  instance_type = "t3.2xlarge"
 
   tags = {
     DemoDate = "03-Feb-2020"
